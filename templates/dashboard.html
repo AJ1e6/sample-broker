@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        {{ common_css | safe }}
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
+        <a href="{{ url_for('orders') }}">Orders</a>
+        <a href="{{ url_for('positions') }}">Positions</a>
+        <a href="{{ url_for('funds') }}">Funds</a>
+    </div>
+    <div class="content">
+        <h1>Broker Dashboard</h1>
+        <p>Welcome to your dashboard, {{ username }}. Here you can manage your clients, view portfolio performance, and more.</p>
+    </div>
+    <div class="container">
+        <h2>Dashboard Overview</h2>
+        <p>Manage your clients</p>
+        <p>View portfolio performance</p>
+        <p>Access market data</p>
+        <p><a href="{{ url_for('index') }}">Logout</a></p>
+    </div>
+</body>
+</html>
